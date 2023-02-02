@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Container } from "./styles";
 import { FiPlus } from 'react-icons/fi'
 import { currencyFormat } from "../../helpers/currencyFormat";
@@ -13,7 +14,37 @@ export function Snacks({snacks} : SnacksProps){
 
   const [snacksCart, setSnacksCart] = useState([{}]);
 
-  console.log(snacksCart)
+
+
+  const handleSnacks = (snacks, snacksCart)=>{
+    setSnacksCart([{
+          id: snacks.id,
+          snack: snacks.snack,
+          name: snacks.name,
+          description: snacks.description,
+          price: snacks.price,
+          image: snacks.image,
+    }])
+
+    snacksCart.map((snack)=>{
+      axios({
+        method: 'post',
+        url:  'http://localhost:5000/snacks',
+        data:{
+          id: snack.id,
+          name: snack.name,
+          image: snack.image,
+          price: snack.price,
+        }
+      })
+    })
+
+
+  }
+
+
+
+
 
   return (
     <Container>
@@ -24,17 +55,11 @@ export function Snacks({snacks} : SnacksProps){
           <p>{snack.description}</p>
           <div>
             <strong>{currencyFormat(snack.price)}</strong>
-            <button type="button" onClick={()=>{
-              setSnacksCart([...snacksCart, {
-                "id": snack.id,
-                "snack": snack.snack,
-                "name": snack.name,
-                "description": snack.description,
-                "price": snack.price,
-                "image": snack.image,
-              }])
-
+            <button type="button" onClick={()=> {
+              handleSnacks(snack, snacksCart);
             }}>
+
+
               <FiPlus/>
             </button>
           </div>

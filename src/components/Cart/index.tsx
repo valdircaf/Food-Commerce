@@ -1,18 +1,16 @@
 import { CartContainer } from "./styled";
-
-
-
-
-
+import { NavLink } from "react-router-dom";
 
 
 export default function Cart(){
 
-
   return <>
     <CartContainer>
-      Carrinho
+      <NavLink to='cart'>
+        Carrinho
+      </NavLink>
     </CartContainer>
   </>
+
 
 }

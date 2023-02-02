@@ -29,7 +29,7 @@
       "snack": "burger",
       "name": "Big Carne",
       "description": "Uma carne artesanal de primeira qualidade com 4cm de altura e uma salada completa com alface, cebola, tomate e outros.",
-      "price": 18.0,
+      "price": 18,
       "image": "https://i.imgur.com/bF8EdBb.jpg"
     },
     {
@@ -41,7 +41,6 @@
       "image": "https://i.imgur.com/fdEY2kY.jpg"
     }
   ],
-
   "pizzas": [
     {
       "id": 1,
@@ -96,7 +95,7 @@
       "snack": "pizza",
       "name": "Brigadeiro com Morango",
       "description": "Pizza doce recheada com brigadeiro e morango.",
-      "price": 35.0,
+      "price": 35,
       "image": "https://i.imgur.com/43yC2Ap.jpg"
     },
     {
@@ -116,7 +115,6 @@
       "image": "https://i.imgur.com/RahAKkH.jpg"
     }
   ],
-
   "drinks": [
     {
       "id": 1,
@@ -151,7 +149,6 @@
       "image": "https://i.imgur.com/2Lf2gHy.jpg"
     }
   ],
-
   "ice-creams": [
     {
       "id": 1,
@@ -192,6 +189,14 @@
       "description": "O clássico sorvete de morango que deixe tudo mais leve.",
       "price": 10,
       "image": "https://i.imgur.com/0TWnEI7.jpg"
+    }
+  ],
+  "snacks": [
+    {
+      "id": 2,
+      "name": "Extra Bacon",
+      "image": "https://i.imgur.com/B4J04AJ.jpg",
+      "price": 23.5
     }
   ]
 }

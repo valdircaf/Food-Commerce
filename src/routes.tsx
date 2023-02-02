@@ -15,10 +15,14 @@ export function AppRoutes() {
 
         <Route path='/' element={<BurgersPage />}/>
         <Route path='pizzas' element={<PizzasPage />}/>
-        <Route path='pizzas' element={<PizzasPage />}/>
         <Route path='drinks' element={<DrinksPage />}/>
         <Route path='ice-creams' element={<IceCreamsPage />}/>
         <Route path='cart' element={<CartPage />}/>
+        <Route path='ice-creams/cart' element={<CartPage />}/>
+        <Route path='pizzas/cart' element={<CartPage />}/>
+        <Route path='drinks/cart' element={<CartPage />}/>
+
+
 
 
       </Route>

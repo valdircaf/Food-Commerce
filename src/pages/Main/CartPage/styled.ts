@@ -4,41 +4,42 @@ export const CartPageContainer = styled.section`
 
 background-color: ${({theme})=> theme.colors.black};
 color: ${({theme})=> theme.colors.white};
-width: 50%;
+width: 70%;
 margin: 0 auto;
 border-radius: 10px;
 box-sizing: border-box;
 text-transform: uppercase;
 
-.description{
-  display: flex;
-  width: 100%;
-  gap: 20rem;
-  padding: 10px;
-  font-weight: 700;
+svg{
+  color: ${({theme})=> theme.colors.red};
+  font-size: 2rem;
 }
 
-.snacks{
-  display: flex;
-  align-items: center;
-  gap: 5rem;
+button{
+background-color: ${({theme})=> theme.colors.black};
+border: none;
+}
 
-  .food{
+
+.container-snacks{
+
+  background-color: ${({theme})=> theme.colors.gray800};
+  margin-top: 1px;
+
+  button{
+  background-color: ${({theme})=> theme.colors.gray800};
+  border: none;
+}
+
+  .snacks{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
 
-  .price{
-    margin-left: 3rem;
-  }
-
-  .amount{
-    display: flex;
-    gap: 5px;
-  }
-
-  .total{
-    margin-left: 5rem;
+    > img{
+      border-radius: 5px;
+    }
   }
 }
+
 `
